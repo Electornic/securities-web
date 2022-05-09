@@ -11,6 +11,7 @@ import {decrement, increment} from "../store/counter/slice";
 function Home() {
   const dispatch = useDispatch();
   const { value } = useSelector((state: GlobalState) => state.counter);
+  const prefix = process.env.NODE_ENV === 'production' ? 'https://electornic.github.io/securities-web' : '';
 
   return (
     <div>
