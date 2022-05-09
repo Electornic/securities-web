@@ -1,4 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
+import {jsx, css} from '@emotion/react';
+
+const newStyle = css`
+  background-color: blue;
+`
+
 import {GlobalState} from "../store";
 import {decrement, increment} from "../store/counter/slice";
 
@@ -15,6 +21,9 @@ function Home() {
       <button onClick={() => dispatch(decrement())}>
         -
       </button>
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
     </div>
   )
 }
